@@ -1,21 +1,21 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap');
 
 @theme {
-  --color-navy: #0B1F3A;
-  --color-navy-light: #1A3558;
-  --color-navy-dark: #07152A;
-  --color-gold: #C9A961;
-  --color-gold-light: #D9BF85;
-  --color-gold-dark: #A8894A;
-  --color-cream: #FAF7F2;
-  --color-cream-warm: #F2EBDF;
-  --color-charcoal: #2C2C2C;
-  --color-grey: #6B6B6B;
-  --color-grey-light: #D5D5D5;
+  --color-navy: #1A3B5D;
+  --color-navy-light: #2A5580;
+  --color-navy-dark: #0F2440;
+  --color-gold: #BD9645;
+  --color-gold-light: #D4B06A;
+  --color-gold-dark: #9A7A32;
+  --color-cream: #FAF8F5;
+  --color-cream-warm: #F5F0E8;
+  --color-charcoal: #2D2D2D;
+  --color-grey: #8C8C8C;
+  --color-grey-light: #E5E5E5;
   --color-white: #FFFFFF;
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
-  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-display: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
 }
 
 html {
@@ -24,7 +24,11 @@ html {
 
 body {
   font-family: var(--font-sans);
-  color: #1A1A1A;
+  color: #2D2D2D;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
 }
 
 ::-webkit-scrollbar { width: 8px; }

@@ -3,20 +3,21 @@ import Image from 'next/image';
 
 const footerLinks = {
   Company: [
-    { label: 'About Us', href: '/about' },
-    { label: 'Our Portfolio', href: '/portfolio' },
-    { label: 'Subsidiaries', href: '/subsidiaries' },
-    { label: 'Investor Relations', href: '/investors' },
+    { label: 'About', href: '/about' },
+    { label: 'Team', href: '/team' },
+    { label: 'Portfolio', href: '/portfolio' },
+    { label: 'Market Insights', href: '/insights' },
   ],
-  Subsidiaries: [
-    { label: 'Desert Build', href: '/subsidiaries' },
-    { label: 'Haysal Real Estate', href: '/subsidiaries' },
-    { label: 'Future Ventures', href: '/subsidiaries' },
+  Services: [
+    { label: 'Investment Management', href: '/services' },
+    { label: 'SPV Structuring', href: '/services' },
+    { label: 'Due Diligence', href: '/services' },
+    { label: 'Investor Relations', href: '/services' },
   ],
-  'Quick Links': [
-    { label: 'Contact Us', href: '/contact' },
-    { label: 'Privacy Policy', href: '#' },
-    { label: 'Terms of Service', href: '#' },
+  Contact: [
+    { label: 'info@goldendesert.ae', href: 'mailto:info@goldendesert.ae' },
+    { label: 'Dubai, UAE', href: '/contact' },
+    { label: 'Investor enquiry', href: '/contact' },
   ],
 };
 
@@ -27,27 +28,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <Image src="/logo-light.jpg" alt="Golden Desert Investments" width={48} height={48} className="rounded" />
-              <div>
-                <span className="text-white font-bold text-xl">GOLDEN DESERT</span>
-                <span className="block text-gold text-[10px] tracking-[0.25em] uppercase">Investments</span>
-              </div>
+              <Image src="/gd-logo-dark.png" alt="Golden Desert Investment Consultant" width={64} height={64} className="object-contain" />
             </div>
             <p className="text-white/50 text-sm leading-relaxed mb-6 max-w-sm">
-              A Dubai-based investment holding company with a diversified portfolio spanning real estate development, construction, and property investments.
+              Independent investment advisory for high-net-worth investors and family offices. Dubai-based. UAE &amp; MENA mandate.
             </p>
-            <div className="flex gap-3">
-              {['LinkedIn', 'Twitter', 'Instagram'].map((social) => (
-                <a
-                  key={social}
-                  href="#"
-                  className="w-10 h-10 rounded bg-white/5 hover:bg-gold/20 border border-white/10 flex items-center justify-center transition-colors text-xs text-white/60 hover:text-gold"
-                  aria-label={social}
-                >
-                  {social[0]}
-                </a>
-              ))}
-            </div>
           </div>
 
           {Object.entries(footerLinks).map(([title, links]) => (
@@ -66,13 +51,9 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex flex-wrap gap-6 text-sm text-white/50">
-            <span>📍 Business Bay, Dubai, UAE</span>
-            <span>✉️ info@goldendesertinvestments.ae</span>
-          </div>
-          <p className="text-white/30 text-xs">
-            © {new Date().getFullYear()} Golden Desert Investments. All rights reserved.
+        <div className="mt-12 pt-8 border-t border-white/10">
+          <p className="text-white/30 text-xs text-center">
+            &copy; 2026 Golden Desert Investment Consultant LLC. All rights reserved. Licensed in the Emirate of Dubai. A Desert Group company.
           </p>
         </div>
       </div>

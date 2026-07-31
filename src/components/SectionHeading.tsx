@@ -24,7 +24,7 @@ export default function SectionHeading({ subtitle, title, description, light, ce
           {subtitle}
         </span>
       )}
-      <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${light ? 'text-white' : 'text-navy'}`}>
+      <h2 className={`font-serif text-3xl md:text-4xl font-medium mb-4 ${light ? 'text-white' : 'text-navy'}`}>
         {title}
       </h2>
       {description && (

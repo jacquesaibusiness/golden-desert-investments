@@ -3,56 +3,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import SectionHeading from '@/components/SectionHeading';
-import AnimatedCounter from '@/components/AnimatedCounter';
-
-const subsidiaries = [
-  {
-    title: 'Desert Build',
-    category: 'Construction',
-    description: 'Full-service construction company delivering residential and commercial projects across Dubai. From G+4 developments to luxury villas.',
-    icon: '🏗️',
-    href: '/subsidiaries',
-  },
-  {
-    title: 'Haysal Real Estate',
-    category: 'Brokerage',
-    description: 'Premium real estate brokerage specializing in off-plan sales, property investments, and renovation projects in Dubai.',
-    icon: '🏢',
-    href: '/subsidiaries',
-  },
-  {
-    title: 'Future Ventures',
-    category: 'Innovation',
-    description: 'Exploring tokenized real estate, PropTech innovations, and next-generation investment vehicles for the modern investor.',
-    icon: '🚀',
-    href: '/subsidiaries',
-  },
-];
-
-const projects = [
-  {
-    title: 'Jebel Ali Hills G+4',
-    type: 'Residential Development',
-    value: 'AED 40-50M',
-    status: 'In Development',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80',
-  },
-  {
-    title: 'Business Bay Commercial',
-    type: 'Commercial Investment',
-    value: 'AED 25M',
-    status: 'Active',
-    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80',
-  },
-  {
-    title: 'Dubai Marina Renovation',
-    type: 'Renovation & Flip',
-    value: 'AED 8M',
-    status: 'Completed',
-    image: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&q=80',
-  },
-];
 
 export default function HomePage() {
   return (
@@ -60,26 +10,18 @@ export default function HomePage() {
       {/* Hero */}
       <section className="relative h-screen min-h-[700px] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          {/* Video Background */}
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-            poster="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&q=80"
-          >
-            <source src="/videos/dubai-skyline.mp4" type="video/mp4" />
-            {/* Fallback for browsers that don't support video */}
-            <Image
-              src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&q=80"
-              alt="Dubai Skyline"
-              fill
-              className="object-cover"
-              priority
-            />
-          </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/60 to-navy/90" />
+          {/* Hero Background Image */}
+          <Image
+            src="/hero-desert-villas.jpg"
+            alt="Aerial view of a Golden Desert residential villa community at golden hour"
+            fill
+            priority
+            quality={90}
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/20 to-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy/65 via-navy/20 to-transparent" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -89,6 +31,9 @@ export default function HomePage() {
             transition={{ duration: 1 }}
             className="max-w-3xl"
           >
+            <div className="mb-8">
+              <Image src="/gd-logo-dark.png" alt="Golden Desert Investment Consultant" width={160} height={160} className="object-contain" />
+            </div>
             <span className="text-gold font-semibold text-xs uppercase tracking-[0.15em] mb-6 block">
               Dubai · Est. 2024
             </span>
@@ -230,7 +175,7 @@ export default function HomePage() {
               </div>
               <h3 className="font-serif text-xl font-semibold text-navy mb-3">Due Diligence</h3>
               <p className="text-grey text-sm leading-relaxed mb-4">
-                Document-driven diligence on sponsors, counterparties, and assets. We specialise in the UAE regulatory and market environment.
+                Deep, document-driven diligence on sponsors, assets, and jurisdictions. We say no more than we say yes — and our investors thank us for it.
               </p>
               <ul className="space-y-2 text-sm text-grey">
                 <li>• Legal & title diligence</li>

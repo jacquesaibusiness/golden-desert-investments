@@ -8,9 +8,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
+  { href: '/team', label: 'Team' },
   { href: '/portfolio', label: 'Portfolio' },
-  { href: '/subsidiaries', label: 'Subsidiaries' },
-  { href: '/investors', label: 'Investors' },
+  { href: '/insights', label: 'Insights' },
   { href: '/contact', label: 'Contact' },
 ];
 
@@ -29,11 +29,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-3">
-            <Image src="/logo-light.jpg" alt="Golden Desert Investments" width={48} height={48} className="rounded" />
-            <div className="hidden sm:block">
-              <span className="text-white font-bold text-lg tracking-tight">GOLDEN DESERT</span>
-              <span className="block text-gold text-[10px] tracking-[0.25em] uppercase">Investments</span>
-            </div>
+            <Image src="/gd-logo-dark.png" alt="Golden Desert Investment Consultant" width={72} height={72} className={`object-contain transition-opacity duration-300 ${scrolled ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} />
           </Link>
 
           <div className="hidden lg:flex items-center gap-1">
@@ -50,7 +46,7 @@ export default function Navbar() {
 
           <div className="hidden lg:block">
             <Link
-              href="/investors"
+              href="/contact"
               className="bg-gold hover:bg-gold-light text-navy font-semibold px-6 py-2.5 rounded text-sm transition-all duration-200 hover:shadow-lg hover:shadow-gold/20"
             >
               Invest With Us
@@ -93,7 +89,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <Link
-                href="/investors"
+                href="/contact"
                 onClick={() => setIsOpen(false)}
                 className="block bg-gold text-navy font-semibold px-4 py-3 rounded text-center mt-4"
               >

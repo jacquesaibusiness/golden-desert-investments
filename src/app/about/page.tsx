@@ -2,29 +2,6 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import SectionHeading from '@/components/SectionHeading';
-
-const values = [
-  { title: 'Integrity', description: 'Transparent dealings and honest partnerships form the foundation of every investment decision.', icon: '🛡️' },
-  { title: 'Excellence', description: 'We pursue the highest standards in construction, management, and investor relations.', icon: '⭐' },
-  { title: 'Innovation', description: 'Embracing technology and new models like tokenization to stay ahead of the market.', icon: '💡' },
-  { title: 'Legacy', description: 'Building assets and communities that endure for generations, not just quarterly returns.', icon: '🏛️' },
-];
-
-const timeline = [
-  { year: '2010', title: 'Foundation', description: 'Core team begins operations in Dubai real estate market.' },
-  { year: '2015', title: 'Desert Build Established', description: 'Construction subsidiary launched to control build quality and margins.' },
-  { year: '2019', title: 'Haysal Real Estate', description: 'Brokerage arm established to capture off-plan and secondary market opportunities.' },
-  { year: '2022', title: 'Golden Desert Investments', description: 'Holding company formalized to unify operations under one strategic umbrella.' },
-  { year: '2024', title: 'Jebel Ali Hills', description: 'Flagship G+4 development project launched — AED 40-50M investment.' },
-  { year: '2025', title: 'Expansion', description: 'Exploring tokenization, new land acquisitions, and regional expansion.' },
-];
-
-const leaders = [
-  { name: 'Chairman', role: 'Chairman & Founder', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80' },
-  { name: 'CEO', role: 'Chief Executive Officer', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80' },
-  { name: 'CFO', role: 'Chief Financial Officer', image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80' },
-];
 
 export default function AboutPage() {
   return (
@@ -42,145 +19,161 @@ export default function AboutPage() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <span className="text-gold font-semibold text-sm uppercase tracking-[0.3em] mb-4 block">About Us</span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">Building Dubai&apos;s Future</h1>
+            <span className="text-gold font-semibold text-xs uppercase tracking-[0.15em] mb-4 block">About Golden Desert</span>
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium text-white leading-tight max-w-4xl">
+              An independent advisory firm, built for investors who expect more.
+            </h1>
+            <p className="text-white/80 text-lg mt-6 max-w-3xl leading-relaxed">
+              We combine the discipline of institutional investing with the agility and alignment of a founder-led team. Our only business is delivering risk-adjusted returns for the capital we steward.
+            </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Story */}
+      {/* Our Story */}
       <section className="py-24 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <SectionHeading subtitle="Our Story" title="From Vision to Reality" center={false} />
-              <p className="text-warm-gray leading-relaxed mb-6">
-                Golden Desert Investments was born from a simple conviction: Dubai&apos;s real estate market rewards those who combine local expertise with institutional discipline. Our founders, with over 15 years of combined experience, built a holding company that doesn&apos;t just invest in properties — it creates ecosystems of value.
+          <div className="max-w-4xl">
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+              <span className="text-gold font-semibold text-xs uppercase tracking-[0.15em] mb-4 block">Our Story</span>
+              <h2 className="font-serif text-3xl md:text-4xl font-medium text-navy mb-6">Why Golden Desert exists.</h2>
+              <p className="text-charcoal text-lg leading-relaxed mb-6">
+                The UAE has become one of the most active investment jurisdictions in the world — but most investors from the region, and increasingly from outside it, struggle to find an advisory partner that is both genuinely local and genuinely independent.
               </p>
-              <p className="text-warm-gray leading-relaxed">
-                Through our subsidiaries — Desert Build and Haysal Real Estate — we control the entire value chain from land acquisition to construction to sales. This vertical integration allows us to deliver superior returns while maintaining the highest quality standards.
+              <p className="text-grey leading-relaxed mb-6">
+                Global houses provide credibility but limited local nuance. Regional sovereign vehicles are world-class but inaccessible to private capital. Local brokers often lack the structuring rigour institutional investors expect.
               </p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="relative h-[400px] rounded-2xl overflow-hidden"
-            >
-              <Image src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="Our Story" fill className="object-cover" />
+              <p className="text-grey leading-relaxed">
+                Golden Desert was founded to close that gap. We are independent of any bank, developer, or sovereign mandate. Our founders are operators — not salespeople — with deep roots in Dubai&apos;s real estate and construction markets and a track record of putting their own capital alongside investors.
+              </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Vision & Mission */}
+      {/* Corporate Structure */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <span className="text-gold font-semibold text-xs uppercase tracking-[0.15em] mb-4 block">Structure</span>
+            <h2 className="font-serif text-3xl md:text-4xl font-medium text-navy mb-6">A focused holding company with SPV-driven execution.</h2>
+            <p className="text-grey text-lg leading-relaxed mb-12 max-w-3xl">
+              Golden Desert Investment Consultant LLC is the holding entity. Each investment is executed through a purpose-built special purpose vehicle (SPV), creating a clean legal perimeter around assets, investor capital, and returns.
+            </p>
+          </motion.div>
+
+          {/* Architecture Diagram */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-2xl mx-auto"
+          >
+            <div className="space-y-4">
+              <div className="bg-navy text-white p-8 text-center">
+                <h3 className="font-serif text-xl font-medium mb-1">Golden Desert Investment Consultant LLC</h3>
+                <p className="text-white/60 text-sm">Holding Company &middot; Mandate Origination</p>
+              </div>
+              <div className="flex justify-center">
+                <div className="w-px h-8 bg-gold"></div>
+              </div>
+              <div className="bg-gold/10 border border-gold/30 p-8 text-center">
+                <h3 className="font-serif text-xl font-medium text-navy mb-1">Deal-Specific SPV</h3>
+                <p className="text-grey text-sm">Ring-fenced assets &middot; Defined waterfall</p>
+              </div>
+              <div className="flex justify-center">
+                <div className="w-px h-8 bg-gold"></div>
+              </div>
+              <div className="bg-cream-warm p-8 text-center">
+                <h3 className="font-serif text-xl font-medium text-navy mb-1">Qualified Investors</h3>
+                <p className="text-grey text-sm">Direct co-investment &middot; Quarterly reporting</p>
+              </div>
+            </div>
+
+            <div className="flex justify-center gap-8 mt-8 text-sm text-grey">
+              <span>Ring-fenced risk per deal</span>
+              <span>&middot;</span>
+              <span>Transparent fund flow</span>
+              <span>&middot;</span>
+              <span>Flexible co-investment</span>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Positioning */}
       <section className="py-24 bg-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <span className="text-gold font-semibold text-xs uppercase tracking-[0.15em] mb-4 block">Positioning</span>
+            <h2 className="font-serif text-3xl md:text-4xl font-medium text-white mb-12">Where Golden Desert fits.</h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white/5 border border-white/10 rounded-2xl p-10"
+              transition={{ delay: 0 }}
+              className="bg-white/5 border border-white/10 p-8"
             >
-              <span className="text-gold text-3xl mb-4 block">🔭</span>
-              <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
-              <p className="text-white/60 leading-relaxed">
-                To be Dubai&apos;s most trusted investment holding group — known for disciplined capital allocation, exceptional build quality, and creating lasting value for our partners and communities.
+              <h3 className="font-serif text-xl font-medium text-white mb-4">Vs. regional sovereigns</h3>
+              <p className="text-white/70 text-sm leading-relaxed">
+                Firms like ADIA and Mubadala set the institutional bar. We complement them by serving capital that is too private, too agile, or too specific to fit within a sovereign mandate.
               </p>
             </motion.div>
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.15 }}
-              className="bg-white/5 border border-white/10 rounded-2xl p-10"
+              className="bg-white/5 border border-white/10 p-8"
             >
-              <span className="text-gold text-3xl mb-4 block">🎯</span>
-              <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
-              <p className="text-white/60 leading-relaxed">
-                To build, acquire, and manage a diversified real estate portfolio that delivers superior risk-adjusted returns while contributing to Dubai&apos;s urban development and economic growth.
+              <h3 className="font-serif text-xl font-medium text-white mb-4">Vs. global houses</h3>
+              <p className="text-white/70 text-sm leading-relaxed">
+                Blackstone and Brookfield offer scale. We offer ground-truth — deal flow that never reaches a global deal team&apos;s screen, underwritten by people who live in this market.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="bg-white/5 border border-white/10 p-8"
+            >
+              <h3 className="font-serif text-xl font-medium text-white mb-4">Vs. local brokers</h3>
+              <p className="text-white/70 text-sm leading-relaxed">
+                Plenty of firms will sell you a property. We structure an investment. The difference shows up in diligence, alignment, and what happens after the wire transfer clears.
               </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Leadership */}
+      {/* Governance */}
       <section className="py-24 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading subtitle="Leadership" title="Our Team" description="Experienced professionals driving strategic growth" />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {leaders.map((leader, i) => (
-              <motion.div
-                key={leader.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.15 }}
-                className="text-center"
-              >
-                <div className="relative w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 border-4 border-gold/20">
-                  <Image src={leader.image} alt={leader.name} fill className="object-cover" />
-                </div>
-                <h3 className="text-xl font-bold text-navy">{leader.name}</h3>
-                <p className="text-gold text-sm font-medium">{leader.role}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <span className="text-gold font-semibold text-xs uppercase tracking-[0.15em] mb-4 block">Governance</span>
+            <h2 className="font-serif text-3xl md:text-4xl font-medium text-navy mb-6">Institutional standards as a baseline, not a feature.</h2>
+            <p className="text-grey text-lg leading-relaxed mb-12 max-w-3xl">
+              Every investor relationship at Golden Desert begins with full AML/KYC onboarding, documented source-of-funds verification, and a written investment agreement. Every SPV maintains separate books, independent accounting, and quarterly investor reporting.
+            </p>
+          </motion.div>
 
-      {/* Timeline */}
-      <section className="py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading subtitle="Milestones" title="Our Journey" />
-          <div className="relative">
-            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gold/30 -translate-x-1/2" />
-            {timeline.map((item, i) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {['AML/KYC', 'SPV Books', 'Reporting', 'Audit Trail'].map((pillar, i) => (
               <motion.div
-                key={item.year}
+                key={pillar}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className={`relative flex items-start gap-8 mb-12 ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+                className="bg-white border border-navy/8 p-6 text-center"
               >
-                <div className={`flex-1 ${i % 2 === 0 ? 'md:text-right' : 'md:text-left'} hidden md:block`}>
-                  <span className="text-gold font-bold text-lg">{item.year}</span>
-                  <h4 className="text-navy font-bold text-lg">{item.title}</h4>
-                  <p className="text-warm-gray text-sm">{item.description}</p>
-                </div>
-                <div className="relative z-10 w-4 h-4 bg-gold rounded-full border-4 border-cream shrink-0 mt-1 ml-6 md:ml-0" />
-                <div className="flex-1 md:hidden ml-4">
-                  <span className="text-gold font-bold text-lg">{item.year}</span>
-                  <h4 className="text-navy font-bold text-lg">{item.title}</h4>
-                  <p className="text-warm-gray text-sm">{item.description}</p>
-                </div>
-                <div className="flex-1 hidden md:block" />
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Values */}
-      <section className="py-24 bg-cream">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading subtitle="Our Values" title="What We Stand For" />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, i) => (
-              <motion.div
-                key={value.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-white rounded-2xl p-8 shadow-sm text-center"
-              >
-                <span className="text-4xl mb-4 block">{value.icon}</span>
-                <h3 className="text-lg font-bold text-navy mb-2">{value.title}</h3>
-                <p className="text-warm-gray text-sm leading-relaxed">{value.description}</p>
+                <div className="font-serif text-lg font-medium text-navy">{pillar}</div>
               </motion.div>
             ))}
           </div>
